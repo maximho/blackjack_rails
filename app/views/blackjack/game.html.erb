@@ -1,0 +1,48 @@
+
+<h1>Welcome to the Blackjack game!</h1>
+<p>Rules: The Bank stand at 17. Insurance pays 2 to 1</p>
+
+Do you want a card?? (hit or stand)
+
+<%= link_to "Hit", hit_path(:pc => @player_cards, :test => @player_points) %>
+
+<%= button_to "Stand", stand_path, method: :get %>
+
+<p>
+	Puts: <%=@type%> got <%=@card_name%>. <%=@type%> have <%=@player_points%> points 
+</p>
+
+<p>
+  Player cards: <%= @player_cards %>
+</p>
+
+<p>
+  Player Points: <%= @player_points %>
+</p>
+
+<p>
+  Params: <%= params %>
+</p>
+
+
+ <%#=  
+	
+
+# 	while player_points < 21
+# 		if params["stand"] 
+# 			 @stand_resolution
+# 			break
+# 		elsif params["hit"] 
+# 			player_points = calculation(player_points, player_cards, "Player")
+# 		end
+# 	end
+
+# 	player_feedback(player_points)
+
+
+# 	while bank_points < 17
+# 		bank_points = calculation(bank_points, bank_cards, "Bank")
+# 	end
+
+
+# 	resolution(player_points, bank_points)%>
